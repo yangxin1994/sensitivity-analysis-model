@@ -50,8 +50,10 @@ salib analyze sobol \
 这会将索引和置信区间打印到命令行。您可以使用>运算符重定向到文件。
 
 ###并行索引计算（仅Sobol方法）
-Si  =  sobol。分析（问题，Y，calc_second_order = True，conf_level = 0.95，
-                    print_to_console = False，并行= True，n_processors = 4）
+```python
+Si = sobol.analyze(problem, Y, calc_second_order=True, conf_level=0.95,
+                   print_to_console=False, parallel=True, n_processors=4)
+```
 其他方法包括Morris，FAST，Delta-MIM和DGSM。有关每种方法的所有命令行选项的说明，[请参见此处的示例](https://github.com/SALib/SALib/tree/master/examples).。
 
 <br><br>
